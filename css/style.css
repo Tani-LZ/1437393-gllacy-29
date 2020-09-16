@@ -15,7 +15,7 @@
   --special-menuactiveshadow: #696969;
   --special-menucurrent: #d07058;
   --special-loginbutton: rgba(255, 255, 255, 0.2);
-  --special-buttonshadow: rgba(172, 16, 0, 0.64);
+  --special-buttonshadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   --special-buttontextshadow: rgba(160, 32, 11, 0.76);
   --special-buttonhover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --special-buttonshadowhover: #ac1000;
@@ -30,11 +30,12 @@
   --specil-linkhover2: #e84d37;
   --specil-formborder: #d3d3d2;
   --special-formfocus: rgba(46, 136, 228, 0.52);
+  --special-linkunderline: rgba(255, 188, 158, 0.3);
 }
 
 /* Global */
 body {
-  min-width: 1166px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -54,12 +55,29 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
+  padding: 10px 1.25em;
   font: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
   color: var(--basic-white);
   background: var(--basic-button);
-  box-shadow: 0px 2px 2px var(--special-buttonshadow);
+  box-shadow: var(--special-buttonshadow);
   border: none;
+  border-radius: 70px;
   cursor: pointer;
 }
 
@@ -88,6 +106,7 @@ img {
 
 .site-navigation a {
   color: var(--basic-white);
+  border-bottom: 1px solid var(--special-loginbutton);
 }
 
 .site-navigation a:hover,
@@ -191,7 +210,6 @@ img {
 }
 
 .slide-button {
-  font-weight: bold;
   font-size: 32px;
   line-height: 44px;
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
@@ -223,9 +241,6 @@ img {
 }
 
 .banner-button {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
@@ -251,12 +266,6 @@ img {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-}
-
-.hits-button {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
 }
 
 /* About */
@@ -317,9 +326,6 @@ img {
 }
 
 .subscription-button {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
@@ -364,9 +370,6 @@ img {
 }
 
 .address-button {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
@@ -383,6 +386,7 @@ img {
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-white);
+  border-bottom: 1px solid var(--special-loginbutton);
 }
 
 .info-link-supplier {
@@ -393,6 +397,7 @@ img {
 .info-link:focus,
 .info-link:active {
   color: var(--special-linkhover);
+  border-bottom: 1px solid var(--special-linkunderline);
 }
 
 .copyright-text {
@@ -438,8 +443,8 @@ img {
 }
 
 .account-button {
-  font-size: 18px;
   line-height: 16px;
+  border-radius: 26px;
 }
 
 .feedback-form-title {
@@ -467,8 +472,5 @@ img {
 }
 
 .feedback-button {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
