@@ -31,6 +31,7 @@
   --specil-formborder: #d3d3d2;
   --special-formfocus: rgba(46, 136, 228, 0.52);
   --special-linkunderline: rgba(255, 188, 158, 0.3);
+  --special-itemprice: #ababab;
 }
 
 /* Global */
@@ -109,6 +110,11 @@ img {
   border-bottom: 1px solid var(--special-loginbutton);
 }
 
+.site-navigation-current > a {
+  background-color: var(--special-menucurrent);
+  border-radius: 26px;
+}
+
 .site-navigation a:hover,
 .site-navigation a:focus {
   color: var(--basic-text);
@@ -130,6 +136,10 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: var(--basic-text);
+}
+
+.sub-navigation-current a {
+  background-color: var(--special-menucurrent);
 }
 
 .sub-navigation a:hover,
@@ -180,6 +190,11 @@ img {
   background-color: var(--basic-white);
 }
 
+.header-cart-full {
+  color: var(--basic-text);
+  background-color: var(--basic-white);
+}
+
 /* Opening/tel */
 .header-opening {
   font-weight: bold;
@@ -215,6 +230,29 @@ img {
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-white);
+  border-bottom: 1px solid var(--special-loginbutton);
+}
+
+.breadcrumbs-current {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
 
 /* Banners */
 .banners-list {
@@ -244,28 +282,56 @@ img {
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
-/* Hits */
+/* Catalog/Hits */
+.catalog-list,
 .hits-list {
   list-style: none;
 }
 
-.hits-price {
+.hits-price,
+.catalog-price {
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0px 1px 3px var(--special-priceshadow);
 }
 
-.hits-price span {
+.hits-price span,
+.catalog-price span {
   font-size: 30px;
   line-height: 35px;
 }
 
-.hits-title {
+.hits-title,
+.catalog-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
+}
+
+/* Pagination */
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  color: var(--basic-white);
+}
+
+.pagination-item-current a {
+  color: var(--basic-text);
+  background-color: var(--basic-white);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background-color: var(--special-loginbutton);
+}
+
+.pagination-item a:active {
+  color: var(--basic-text);
+  background-color: var(--basic-white);
 }
 
 /* About */
@@ -373,6 +439,62 @@ img {
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
+/* Filters */
+.filter legend {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter ul {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  list-style: none;
+}
+
+.filter-sorting {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--special-loginbutton);
+  border: none;
+}
+
+.filter-sorting-option {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-text);
+}
+
+.filter-sorting:focus {
+  color: var(--basic-text);
+}
+
+.filter-button {
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background: var(--special-loginbutton);
+  border: 2px solid var(--basic-white);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--basic-text);
+  background-color: var(--basic-white);
+}
+
+.filter-button:active {
+  box-shadow: inset 0px 2px 1px var(--special-menuactiveshadow);
+}
+
 /* Footer */
 .footer-socials-list {
   list-style: none;
@@ -413,6 +535,7 @@ img {
 .modal {
   color: var(--basic-text);
   background-color: var(--special-formbackground);
+  display: none;
 }
 
 .modal-link {
@@ -473,4 +596,29 @@ img {
 
 .feedback-button {
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
+}
+
+.user-cart-list {
+  list-style: none;
+}
+
+.cart-item-title {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.cart-item-price,
+.cart-item-total-price {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.cart-item-price span {
+  color: var(--special-itemprice);
+}
+
+.user-cart-total-price {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 16px;
 }
