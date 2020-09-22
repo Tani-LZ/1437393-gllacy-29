@@ -29,14 +29,18 @@
         <li><a href="">О компании</a></li>
       </ul>
     </nav>
-    <form class="header-search" method="post">
-      <label for="search"></label>
-      <input type="search" id="search" placeholder="Крем-брюле">
-    </form>
-    <button class="header-login user-button" type="button">Вход</button>
-    <button class="header-cart user-button header-cart-full" type="button">2 товара</button>
-    <p class="header-opening">С 10 до 20, ежедневно</p>
-    <a class="header-tel" href="tel:88124502525">8 812 450-25-25</a>
+    <div class="user-navigation">
+      <form class="header-search" method="post">
+        <label for="search"></label>
+        <input type="search" id="search" placeholder="Крем-брюле">
+      </form>
+      <button class="header-login user-button" type="button">Вход</button>
+      <button class="header-cart user-button header-cart-full" type="button">2 товара</button>
+    </div>
+    <div class="header-contact-wrapper">
+      <p class="header-opening">С 10 до 20, ежедневно</p>
+      <a class="header-tel" href="tel:88124502525">8 812 450-25-25</a>
+    </div>
   </header>
 
   <main class="container">
@@ -215,7 +219,7 @@
     </ul>
   </main>
 
-  <footer class="page-footer main-footer">
+  <footer class="page-footer main-footer container">
     <section class="footer-socials">
       <h2 class="visually-hidden">Наши социальные сети</h2>
       <ul class="footer-socials-list">
@@ -268,7 +272,7 @@
       <h2 class="visually-hidden">О нас</h2>
       <ul class="info-list">
         <li class="info-item">
-          <a class="info-link" href="#">Для поставщиков</a>
+          <a class="info-link info-link-supplier" href="#">Для поставщиков</a>
         </li>
         <li class="info-item">
           <a class="info-link" href="#">Наши документы</a>

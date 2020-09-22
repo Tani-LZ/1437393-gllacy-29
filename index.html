@@ -29,14 +29,18 @@
         <li><a href="">О компании</a></li>
       </ul>
     </nav>
-    <form class="header-search" method="post">
-      <label for="search"></label>
-      <input type="search" id="search" placeholder="Крем-брюле">
-    </form>
-    <button class="header-login user-button" type="button">Вход</button>
-    <button class="header-cart user-button" type="button">Пусто</button>
-    <p class="header-opening">С 10 до 20, ежедневно</p>
-    <a class="header-tel" href="tel:88124502525">8 812 450-25-25</a>
+    <div class="user-navigation">
+      <form class="header-search" method="post">
+        <label for="search"></label>
+        <input type="search" id="search" placeholder="Крем-брюле">
+      </form>
+      <button class="header-login user-button" type="button">Вход</button>
+      <button class="header-cart user-button" type="button">Пусто</button>
+    </div>
+    <div class="header-contact-wrapper">
+      <p class="header-opening">С 10 до 20, ежедневно</p>
+      <a class="header-tel" href="tel:88124502525">8 812 450-25-25</a>
+    </div>
   </header>
 
   <main class="container">
@@ -44,7 +48,7 @@
     <section class="slider">
       <h2 class="visually-hidden">Специальное предложение</h2>
       <ul class="slider-list">
-        <li class="slider-item">
+        <li class="slider-item slide-current">
           <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
           <a class="slide-button button" href="#">Давайте оба!</a>
         </li>
@@ -109,36 +113,40 @@
       <h2 class="about-title">Магазин Глейси - это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
       <ul class="about-list">
         <li class="about-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-        <li class="about-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
         <li class="about-item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+        <li class="about-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
         <li class="about-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
       </ul>
     </section>
-    <article class="news">
-      <h2 class="news-title">Новое в нашем блоге</h2>
-      <a class="news-content" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-    </article>
-    <section class="subscription">
-      <h2 class="visually-hidden">Подписка на рассылку</h2>
-      <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form class="subscription-form" method="post">
-        <label for="subscription-email"></label>
-        <input type="email" id="subscription-email" placeholder="email@example.com">
-        <button class="subscription-button button" type="submit">Отправить</button>
-      </form>
-    </section>
+    <div class="index-columns">
+      <article class="news">
+        <h2 class="news-title">Новое в нашем блоге</h2>
+        <a class="news-content" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      </article>
+      <section class="subscription">
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form class="subscription-form" method="post">
+          <label for="subscription-email"></label>
+          <input type="email" id="subscription-email" placeholder="email@example.com">
+          <button class="subscription-button button" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
     <section class="address">
-      <h2 class="address-title">Адрес главного офиса и офлайн-магазина:</h2>
-      <p class="address-text">ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
-      <p class="address-order">Для заказов по телефону:</p>
-      <a class="address-tel" href="tel:88124502525">8 812 450-25-25</a>
-      <p class="address-opening">(с 10 до 20 ежедневно)</p>
-      <button class="address-button button" type="button">Форма обратной связи</button>
-      <img src="img/map.png" width="1200" height="430" alt="Адрес магазина Глейси на карте города">
+      <div class="address-wrapper">
+        <h2 class="address-title">Адрес главного офиса и офлайн-магазина:</h2>
+        <p class="address-text">ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
+        <p class="address-order">Для заказов по телефону:</p>
+        <a class="address-tel" href="tel:88124502525">8 812 450-25-25</a>
+        <p class="address-opening">(с 10 до 20 ежедневно)</p>
+        <button class="address-button button" type="button">Форма обратной связи</button>
+      </div>
+      <img class="address-image" src="img/map.png" width="1200" height="430" alt="Адрес магазина Глейси на карте города">
     </section>
   </main>
 
-  <footer class="page-footer main-footer">
+  <footer class="page-footer main-footer container">
     <section class="footer-socials">
       <h2 class="visually-hidden">Наши социальные сети</h2>
       <ul class="footer-socials-list">
