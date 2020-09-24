@@ -81,6 +81,10 @@ img {
   align-content: start;
 }
 
+.page-catalog {
+  display: grid;
+}
+
 /* Container  */
 .container {
   box-sizing: border-box;
@@ -252,7 +256,7 @@ img {
 
 /* Slider */
 .slider {
-  min-height: 716px;
+  padding-bottom: 29px;
   background-image: url("../img/slide-image-1.png");
   background-repeat: no-repeat;
   background-position: top 83px center;
@@ -292,6 +296,10 @@ img {
 
 /* Breadcrumbs */
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 9px;
+  margin-top: -53px;
+  padding: 0;
   list-style: none;
 }
 
@@ -308,6 +316,9 @@ img {
 }
 
 .page-title {
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
@@ -316,7 +327,6 @@ img {
 
 /* Banners */
 .banners {
-  margin-top: -68px;
   margin-bottom: 40px;
 }
 
@@ -432,6 +442,9 @@ img {
 /* About */
 .about {
   margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 23px;
+  padding-top: 23px;
   background-image: url("../img/pattern-vaffle.png");
   background-repeat: repeat;
   background-position: 0 0;
@@ -439,6 +452,8 @@ img {
 }
 
 .about-title {
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -456,6 +471,7 @@ img {
 }
 
 .about-item {
+  padding-left: 55px;
   color: var(--basic-text);
 }
 
@@ -520,6 +536,7 @@ img {
 /* Address */
 .address {
   position: relative;
+  width: 1200px;
   margin: 0 auto;
   color: var(--basic-text);
 }
@@ -571,6 +588,10 @@ img {
 }
 
 /* Filters */
+.filter {
+  margin-bottom: 40px;
+}
+
 .filter legend {
   font-weight: 500;
   font-size: 14px;
