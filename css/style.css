@@ -272,7 +272,8 @@ img {
   cursor: pointer;
 }
 
-.header-search-wrapper:hover::before {
+.header-search-wrapper:hover::before,
+.header-search-wrapper:focus::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -500,7 +501,8 @@ img {
   padding-left: 16px;
   padding-right: 30px;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: cover;
+  background-position: 90% 100%;
   border-radius: 16px;
 }
 
@@ -880,6 +882,7 @@ img {
 
 .footer-socials-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -887,6 +890,10 @@ img {
 
 .footer-socials-list li {
   margin-right: 7px;
+}
+
+.footer-socials-list li:last-child {
+  margin-right: 0;
 }
 
 .social-button svg {
@@ -955,6 +962,8 @@ img {
 }
 
 .copyright-text {
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   line-height: 18px;
 }
