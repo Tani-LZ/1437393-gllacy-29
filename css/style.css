@@ -144,7 +144,6 @@ img {
 }
 
 .site-navigation {
-  width: 670px;
   margin: 0;
   padding: 0;
   margin-top: 11px;
@@ -881,11 +880,13 @@ img {
 
 .footer-socials-list {
   display: flex;
-  width: 164px;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer-socials-list li {
+  margin-right: 7px;
 }
 
 .social-button svg {
@@ -966,7 +967,7 @@ img {
 .modal {
   color: var(--basic-text);
   background-color: var(--special-formbackground);
-  /* display: none; */
+  display: none;
 }
 
 .modal-link {
