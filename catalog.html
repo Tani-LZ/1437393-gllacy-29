@@ -18,15 +18,15 @@
       <ul class="site-navigation">
         <li class="site-navigation-current"><a>Каталог</a>
           <ul class="sub-navigation">
-            <li><a href="">Новинки</a></li>
+            <li><a>Новинки</a></li>
             <li class="sub-navigation-current"><a>Сливочное</a></li>
             <li><a href="">Щербеты</a></li>
             <li><a href="">Фруктовый лед</a></li>
             <li><a href="">Мелорин</a></li>
           </ul>
         </li>
-        <li><a href="">Доставка и оплата</a></li>
-        <li><a href="">О компании</a></li>
+        <li class="site-navigation-item"><a href=""><span>Доставка и оплата</span></a></li>
+        <li class="site-navigation-item"><a href=""><span>О компании</span></a></li>
       </ul>
     </nav>
     <div class="user-navigation">
@@ -60,8 +60,8 @@
     <h1 class="page-title">Сливочное мороженое</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр мороженого</h2>
-      <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset>
+      <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="sorting">
           <legend>Сортировка:</legend>
           <select class="filter-sorting" name="sorting">
             <option class="filter-sorting-option" value="rating">по популярности</option>
@@ -70,14 +70,14 @@
             <option class="filter-sorting-option" value="fat-content">по жирности</option>
           </select>
         </fieldset>
-        <fieldset>
+        <fieldset class="price">
           <legend>Цена: 100 ₽ – 500 ₽</legend>
           <label for="price"></label>
           <input type="range" id="price">
         </fieldset>
-        <fieldset>
+        <fieldset class="fat">
           <legend>Жирность:</legend>
-          <ul>
+          <ul class="fat-list">
             <li>
               <input type="radio" id="fat-zero" name="fat" value="zero">
               <label for="fat-zero">0%</label>
@@ -96,9 +96,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="filling">
           <legend>Наполнители:</legend>
-          <ul>
+          <ul class="filling-list">
             <li>
               <input type="checkbox" name="chocolate" id="chocolate" checked>
               <label for="chocolate">шоколадные</label>
@@ -203,7 +203,7 @@
       </ul>
     </section>
     <ul class="pagination-list">
-      <li class="pagination-item-current">
+      <li class="pagination-item pagination-item-current">
         <a>1</a>
       </li>
       <li class="pagination-item">

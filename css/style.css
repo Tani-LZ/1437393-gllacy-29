@@ -81,8 +81,8 @@ img {
   align-content: start;
 }
 
-.page-catalog {
-  display: grid;
+.page-main {
+  margin-top: -43px;
 }
 
 /* Container  */
@@ -91,6 +91,11 @@ img {
   width: 1200px;
   margin: 0 auto;
   padding: 0 27px;
+}
+
+.page-catalog {
+  display: grid;
+  margin-top: -26px;
 }
 
 /* Main-header */
@@ -389,6 +394,18 @@ img {
   background-color: var(--basic-white);
 }
 
+.header-cart-full::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 20px;
+  left: 16px;
+  top: 6px;
+  background-image: url("../img/icon-cart-full.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .header-contact-wrapper {
   grid-column: 2 / -1;
   text-align: right;
@@ -417,13 +434,12 @@ img {
   padding-bottom: 29px;
   background-image: url("../img/slide-image-1.png");
   background-repeat: no-repeat;
-  background-position: top 83px center;
+  background-position: top center;
 }
 
 .slider-list {
   margin: 0;
   padding: 0;
-  margin-top: -123px;
   list-style: none;
 }
 
@@ -439,7 +455,7 @@ img {
 .slide-title {
   margin: 0 auto;
   margin-bottom: 30px;
-  padding-top: 400px;
+  padding-top: 315px;
   width: 672px;
   font-weight: bold;
   font-size: 60px;
@@ -454,18 +470,40 @@ img {
 
 /* Breadcrumbs */
 .breadcrumbs {
+  display: flex;
   margin: 0;
-  margin-bottom: 9px;
-  margin-top: -53px;
+  margin-bottom: 2px;
   padding: 0;
   list-style: none;
 }
 
 .breadcrumbs a {
+  display: block;
+  position: relative;
+  margin-right: 22px;
   font-size: 14px;
   line-height: 16px;
   color: var(--basic-white);
   border-bottom: 1px solid var(--special-loginbutton);
+}
+
+.breadcrumbs a::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 4px;
+  left: 60px;
+  background-image: url("../img/icon-next.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+  color: var(--special-linkhover);
+  border-bottom: 1px solid var(--special-linkunderline);
 }
 
 .breadcrumbs-current {
@@ -475,7 +513,7 @@ img {
 
 .page-title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   padding: 0;
   font-weight: bold;
   font-size: 35px;
@@ -560,6 +598,7 @@ img {
 }
 
 .catalog-list {
+  margin-bottom: 80px;
   row-gap: 40px;
 }
 
@@ -589,11 +628,26 @@ img {
 
 /* Pagination */
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   list-style: none;
 }
 
 .pagination-item a {
+  display: block;
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  padding-top: 3px;
+  margin-right: 4px;
+  text-align: center;
   color: var(--basic-white);
+  border-radius: 50%;
 }
 
 .pagination-item-current a {
@@ -809,17 +863,37 @@ img {
   margin-bottom: 40px;
 }
 
-.filter legend {
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 870px;
+}
+
+.filter-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 14px;
+}
+
+.filter-form legend {
+  margin-left: 17px;
+  margin-bottom: 5px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
 }
 
-.filter ul {
+.filter-form ul {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   list-style: none;
+}
+
+.sorting {
+  width: 196px;
 }
 
 .filter-sorting {
@@ -842,7 +916,45 @@ img {
   color: var(--basic-text);
 }
 
+.price {
+  width: 218px;
+}
+
+.fat {
+  width: 425px;
+}
+
+.fat-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  display: flex;
+  background-color: var(--special-loginbutton);
+  border-radius: 20px;
+}
+
+.filling {
+  width: 711px;
+}
+
+.filling-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  display: flex;
+  background-color: var(--special-loginbutton);
+  border-radius: 20px;
+}
+
 .filter-button {
+  box-sizing: border-box;
+  align-self: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 27px;
+  padding-right: 28px;
   font: inherit;
   font-weight: 500;
   font-size: 16px;
