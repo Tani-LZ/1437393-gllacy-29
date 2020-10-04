@@ -37,7 +37,27 @@
           <input type="search" id="search" placeholder="Крем-брюле">
         </form>
       </div>
-      <button class="header-login user-button" type="button">Вход</button>
+      <div class="header-login-wrapper">
+        <button class="header-login user-button" type="button">Вход</button>
+        <section class="modal-account">
+          <h2 class="visually-hidden">Вход в личный кабинет</h2>
+          <form class="account-form" action="#" method="post">
+            <p>
+              <label class="visually-hidden" for="account-email">Ваш e-mail</label>
+              <input type="email" id="account-email" placeholder="email@example.com">
+            </p>
+            <p>
+              <label class="visually-hidden" for="password">Ваш пароль</label>
+              <input type="password" id="password" placeholder="......">
+            </p>
+            <button class="account-button button" type="submit">Войти</button>
+          </form>
+          <div class="modal-link-wrapper">
+            <a class="modal-link" href="#"><span>Забыли пароль?</span></a>
+            <a class="modal-link" href="#"><span>Новая регистрация</span></a>
+          </div>
+        </section>
+      </div>
       <button class="header-cart user-button" type="button">Пусто</button>
     </div>
     <div class="header-contact-wrapper">
@@ -242,7 +262,7 @@
       <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
         <img class="htmlacademy-logo" src="img/html-academy-logo.svg" width="108" height="39" alt="Логотип HTML Academy">
       </a>
-      <p class="copyright-text">Сделано в <span>HTML Academy</span> &copy; 2019</p>
+      <p class="copyright-text"><a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в <span>HTML Academy</span> &copy; 2019</a></p>
     </section>
   </footer>
   </div>
@@ -251,17 +271,19 @@
     <h2 class="visually-hidden">Вход в личный кабинет</h2>
     <form class="account-form" action="#" method="post">
       <p>
-        <label for="account-email">Ваш e-mail</label>
+        <label class="visually-hidden" for="account-email">Ваш e-mail</label>
         <input type="email" id="account-email" placeholder="email@example.com">
       </p>
       <p>
-        <label for="password">Ваш пароль</label>
+        <label class="visually-hidden" for="password">Ваш пароль</label>
         <input type="password" id="password" placeholder="......">
       </p>
       <button class="account-button button" type="submit">Войти</button>
     </form>
-    <a class="modal-link" href="#">Забыли пароль?</a>
-    <a class="modal-link" href="#">Новая регистрация</a>
+    <div class="modal-link-wrapper">
+      <a class="modal-link" href="#"><span>Забыли пароль?</span></a>
+      <a class="modal-link" href="#"><span>Новая регистрация</span></a>
+    </div>
   </section>
 
   <section class="modal-feedback modal">
