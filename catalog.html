@@ -61,24 +61,26 @@
         <button class="header-cart user-button header-cart-full" type="button">2 товара</button>
         <section class="modal-user-cart">
           <h2 class="visually-hidden">Товары корзины</h2>
-          <ul class="user-cart-list">
-            <li class="user-cart-item">
-              <button class="item-remove" type="button" aria-label="Отменить"></button>
-              <img src="img/cart-image-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-              <h3 class="cart-item-title">Пломбир с апельсиновым джемом</h3>
-              <p class="cart-item-price">1,5 кг х <span>200 руб.</span></p>
-              <p class="cart-item-total-price">300 руб.</p>
-            </li>
-            <li class="user-cart-item">
-              <button class="item-remove" type="button" aria-label="Отменить"></button>
-              <img src="img/cart-image-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
-              <h3 class="cart-item-title">Клубничный пломбир с присыпкой из белого шоколада</h3>
-              <p class="cart-item-price">1,5 кг х <span>300 руб.</span></p>
-              <p class="cart-item-total-price">450 руб.</p>
-            </li>
-          </ul>
-          <p class="user-cart-total-price">Итого: 750 руб.</p>
-          <a class="user-cart-button button" href="#">Оформить заказ</a>
+          <div class="modal-user-cart-wrapper">
+            <ul class="user-cart-list">
+              <li class="user-cart-item">
+                <button class="item-remove" type="button" aria-label="Отменить"></button>
+                <img src="img/cart-image-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                <h3 class="cart-item-title">Пломбир с апельсиновым джемом</h3>
+                <p class="cart-item-price">1,5 кг х <span>200 руб.</span></p>
+                <p class="cart-item-total-price">300 руб.</p>
+              </li>
+              <li class="user-cart-item">
+                <button class="item-remove" type="button" aria-label="Отменить"></button>
+                <img src="img/cart-image-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                <h3 class="cart-item-title">Клубничный пломбир с присыпкой из белого шоколада</h3>
+                <p class="cart-item-price">1,5 кг х <span>300 руб.</span></p>
+                <p class="cart-item-total-price">450 руб.</p>
+              </li>
+            </ul>
+            <p class="user-cart-total-price">Итого: 750 руб.</p>
+            <a class="user-cart-button button" href="#">Оформить заказ</a>
+          </div>
         </section>
       </div>
     </div>
@@ -114,33 +116,48 @@
           </select>
         </fieldset>
         <fieldset class="price">
-          <legend>Цена: 100 ₽ – 500 ₽</legend>
-          <label for="price"></label>
-          <input type="range" id="price">
+          <legend>Цена:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+            </div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+              100 ₽ – <input class="visually-hidden" type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                500 ₽ <input class="visually-hidden" type="number" name="max-price" value="15000">
+              </label>
+            </div>
+        </div>
         </fieldset>
         <fieldset class="fat">
           <legend>Жирность:</legend>
           <ul class="fat-list">
-            <li>
-              <input class="visually-hidden" type="radio" id="fat-zero" name="fat" value="zero">
+            <li class="filter-option filter-radio">
+              <input class="visually-hidden filter-input-radio filter-input" type="radio" id="fat-zero" name="fat" value="zero">
               <label for="fat-zero">0%</label>
             </li>
-            <li>
-              <input class="visually-hidden" type="radio" id="fat-ten" name="fat" value="ten" checked>
+            <li class="filter-option filter-radio">
+              <input class="visually-hidden filter-input-radio filter-input" type="radio" id="fat-ten" name="fat" value="ten" checked>
               <label for="fat-ten">до 10%</label>
             </li>
-            <li>
-              <input class="visually-hidden" type="radio" id="fat-lessthirty" name="fat" value="lessthirty">
+            <li class="filter-option filter-radio">
+              <input class="visually-hidden filter-input-radio filter-input" type="radio" id="fat-lessthirty" name="fat" value="lessthirty">
               <label for="fat-lessthirty">до 30%</label>
             </li>
-            <li>
-              <input class="visually-hidden" type="radio" id="fat-morethirty" name="fat" value="morethirty">
+            <li class="filter-option filter-radio">
+              <input class="visually-hidden filter-input-radio filter-input" type="radio" id="fat-morethirty" name="fat" value="morethirty">
               <label for="fat-morethirty">выше 30%</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="filling">
-          <legend>Наполнители:</legend>
+          <legend class="filling-legend">Наполнители:</legend>
           <ul class="filling-list">
             <li class="filter-option-checkbox filter-checkbox">
               <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="chocolate" id="chocolate" checked>
@@ -166,7 +183,6 @@
         </fieldset>
         <button class="filter-button" type="submit">Применить</button>
       </form>
-
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
@@ -246,6 +262,9 @@
       </ul>
     </section>
     <ul class="pagination-list">
+      <li class="pagination-item pagination-item-previous">
+        <a><span class="visually-hidden">Предыдущая</span></a>
+      </li>
       <li class="pagination-item pagination-item-current">
         <a>1</a>
       </li>
@@ -260,6 +279,9 @@
       </li>
       <li class="pagination-item">
         <a href="#">5</a>
+      </li>
+      <li class="pagination-item pagination-item-next">
+        <a href="#"><span class="visually-hidden">Следующая</span></a>
       </li>
     </ul>
   </main>

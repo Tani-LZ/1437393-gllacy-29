@@ -196,6 +196,7 @@ img {
 }
 
 .site-navigation-current > a {
+  padding-top: 8px;
   padding-bottom: 8px;
   background-color: var(--special-menucurrent);
   border-radius: 26px;
@@ -527,13 +528,16 @@ img {
   top: 36px;
   right: 0px;
   width: 539px;
-  display: flex;
-  flex-direction: column;
   color: var(--basic-text);
   background-color: var(--special-formbackground);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   display: none;
+}
+
+.modal-user-cart-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .user-cart-list {
@@ -892,7 +896,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 267px;
-  min-height: 324px;
+  min-height: 320px;
 }
 
 .hits-item::before {
@@ -954,6 +958,7 @@ img {
 
 /* Pagination */
 .pagination-list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -965,6 +970,7 @@ img {
 }
 
 .pagination-item a {
+  position: relative;
   display: block;
   box-sizing: border-box;
   width: 26px;
@@ -981,12 +987,31 @@ img {
   background-color: var(--basic-white);
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus {
+.pagination-item-next a {
+  width: 7px;
+  height: 26px;
+  margin-right: 0;
+  margin-left: 14px;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pagination-item-previous a {
+  width: 7px;
+  height: 26px;
+  margin-right: 16px;
+  background-image: url("../img/icon-left-small.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pagination-item a:not(.pagination-item-next a, .pagination-item-previous a):hover,
+.pagination-item a:not(.pagination-item-next a, .pagination-item-previous a):focus {
   background-color: var(--special-loginbutton);
 }
 
-.pagination-item a:active {
+.pagination-item a:not(.pagination-item-next a, .pagination-item-previous a):active {
   color: var(--basic-text);
   background-color: var(--basic-white);
 }
@@ -1249,7 +1274,7 @@ img {
 
 /* Filters */
 .filter {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .filter-form {
@@ -1274,6 +1299,10 @@ img {
   line-height: 16px;
 }
 
+.filter-form .filling-legend {
+  margin-bottom: 9px;
+}
+
 .filter-form ul {
   font-weight: 500;
   font-size: 16px;
@@ -1282,16 +1311,40 @@ img {
 }
 
 .sorting {
+  position: relative;
   width: 196px;
 }
 
 .filter-sorting {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding-left: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
+  appearance: none;
   background-color: var(--special-loginbutton);
   border: none;
+  border-radius: 20px;
+}
+
+.sorting::after {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 10px;
+  bottom: 13px;
+  right: 14px;
+  background-image: url("../img/icon-down.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.sorting:focus::after,
+.sorting:active::after {
+  background-image: url("../img/icon-down-active.svg");
 }
 
 .filter-sorting-option {
@@ -1306,7 +1359,66 @@ img {
 }
 
 .price {
+  position: relative;
   width: 218px;
+}
+
+.price-controls {
+  position: absolute;
+  top: -4px;
+  left: 58px;
+}
+
+.range-controls .scale {
+  width: 176px;
+  height: 2px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.price-controls label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.range-controls {
+  position: relative;
+  box-sizing: border-box;
+  height: 36px;
+  padding-top: 16px;
+  padding-left: 21px;
+  padding-right: 21px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.range-controls .bar {
+  width: 55%;
+  height: 2px;
+  margin-left: 20px;
+  background-color: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 35px;
+}
+
+.range-controls .toggle-max {
+  left: 133px;
 }
 
 .fat {
@@ -1316,11 +1428,67 @@ img {
 .fat-list {
   margin: 0;
   padding: 0;
-  padding-top: 8px;
-  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   display: flex;
   background-color: var(--special-loginbutton);
   border-radius: 20px;
+}
+
+.filter-radio {
+  padding-left: 52px;
+}
+
+.filter-radio:first-child {
+  padding-left: 46px;
+}
+
+.filter-option label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -3px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon-radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.8;
+}
+
+.filter-input-radio + label:hover::before,
+.filter-input-radio + label:focus::before {
+  opacity: 1;
+}
+
+.filter-input-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -3px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon-radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.8;
+}
+
+.filter-input-radio:checked + label:hover::before,
+.filter-input-radio:checked + label:focus::before {
+  opacity: 1;
+}
+
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:disabled + label::before {
+  opacity: 0.4;
 }
 
 .filling {
@@ -1358,7 +1526,6 @@ img {
 
 .filter-option-checkbox:nth-child(4) {
   padding-left: 38px;
-
 }
 
 .filter-option-checkbox label {
@@ -1371,30 +1538,51 @@ img {
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -34px;
   top: 0;
   width: 20px;
   height: 20px;
   background-image: url("../img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.8;
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:focus::before {
+  opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label::before {
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: -35px;
   width: 24px;
   height: 20px;
   background-image: url("../img/icon-checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.8;
+}
+
+.filter-input-checkbox:checked + label:hover::before,
+.filter-input-checkbox:checked + label:focus::before {
+  opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label::before {
+  opacity: 0.4;
 }
 
 .filter-button {
   box-sizing: border-box;
   align-self: center;
+  margin-top: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 27px;
