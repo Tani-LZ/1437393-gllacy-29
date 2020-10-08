@@ -970,6 +970,7 @@ img {
   margin-left: 46px;
   padding-left: 16px;
   padding-right: 16px;
+  z-index: 1;
 }
 
 .catalog-item-hover {
@@ -981,13 +982,18 @@ img {
   background-color: var(--special-loginbutton);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  z-index: 9;
+  z-index: -1;
   display: none;
+}
+
+.catalog-item:hover {
+  z-index: 20;
 }
 
 .hits-item:hover .catalog-item-hover,
 .catalog-item:hover .catalog-item-hover {
   display: block;
+  z-index: 2;
 }
 
 /* Pagination */
