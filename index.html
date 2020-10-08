@@ -113,25 +113,33 @@
             <img class="hits-image" src="img/catalog-image-1.jpg" width="267" height="267" alt="Апельсиновое мороженое">
             <p class="hits-price">310 ₽<span>/кг</span></p>
             <h3 class="hits-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            <button class="hits-button button" type="button">Быстрый просмотр</button>
+            <div class="catalog-item-hover">
+              <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            </div>
           </li>
           <li class="hits-item">
             <img class="hits-image" src="img/catalog-image-2.jpg" width="267" height="267" alt="Кофейное мороженое">
             <p class="hits-price">380 ₽<span>/кг</span></p>
             <h3 class="hits-title">Сливочно-кофейное с кусочками шоколада</h3>
-            <button class="hits-button button" type="button">Быстрый просмотр</button>
+            <div class="catalog-item-hover">
+              <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            </div>
           </li>
           <li class="hits-item">
             <img class="hits-image" src="img/catalog-image-3.jpg" width="267" height="267" alt="Клубничное мороженое">
             <p class="hits-price">355 ₽<span>/кг</span></p>
             <h3 class="hits-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-            <button class="hits-button button" type="button">Быстрый просмотр</button>
+            <div class="catalog-item-hover">
+              <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            </div>
           </li>
           <li class="hits-item">
             <img class="hits-image" src="img/catalog-image-4.jpg" width="267" height="267" alt="Мороженое крем-брюле">
             <p class="hits-price">415 ₽<span>/кг</span></p>
             <h3 class="hits-title">Сливочное крем-брюле с карамельной подливкой</h3>
-            <button class="hits-button button" type="button">Быстрый просмотр</button>
+            <div class="catalog-item-hover">
+              <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            </div>
           </li>
         </ul>
       </section>
@@ -290,20 +298,20 @@
     <h2 class="feedback-form-title">Мы обязательно вам ответим!</h2>
     <form class="feedback-form" action="#" method="post">
       <p>
-        <label for="name">Ваше имя</label>
-        <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+        <label class="visually-hidden" for="name">Ваше имя</label>
+        <input class="modal-input" type="text" name="name" id="name" placeholder="Имя Фамилия">
       </p>
       <p>
-        <label for="feedback-email">Ваш e-mail</label>
+        <label class="visually-hidden" for="feedback-email">Ваш e-mail</label>
         <input type="email" id="feedback-email" placeholder="email@example.com">
       </p>
       <p>
-        <label for="text-message">Текст сообщения:</label>
-        <textarea name="text" id="text-message" placeholder="В свободной форме"></textarea>
+        <label class="visually-hidden" for="text-message">Текст сообщения:</label>
+        <textarea name="text" id="text-message" rows="6" placeholder="В свободной форме"></textarea>
       </p>
       <button class="feedback-button button" type="submit">Отправить</button>
     </form>
-    <button type="button">Закрыть</button>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
 </body>
