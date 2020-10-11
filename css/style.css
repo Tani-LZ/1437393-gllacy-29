@@ -308,7 +308,8 @@ img {
   border-radius: 50%;
 }
 
-.header-search-wrapper:hover .header-search {
+.header-search-wrapper:hover .header-search,
+.header-search-wrapper:focus .header-search {
   display: block;
 }
 
@@ -702,7 +703,7 @@ img {
 .slider {
   position: relative;
   padding-top: 273px;
-  padding-bottom: 51px;
+  padding-bottom: 52px;
 }
 
 .slider-list {
@@ -757,7 +758,6 @@ img {
 .slide-title {
   margin: 0 auto;
   margin-bottom: 34px;
-  /* padding-top: 315px; */
   width: 672px;
   font-weight: bold;
   font-size: 60px;
@@ -767,10 +767,13 @@ img {
 .slide-button {
   padding-top: 10px;
   padding-bottom: 15px;
-  padding-left: 40px;
-  padding-right: 41px;
+  padding-left: 23px;
+  padding-right: 23px;
+  margin-right: 15px;
   font-size: 32px;
   line-height: 44px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
@@ -905,8 +908,10 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 267px;
+  align-items: center;
+  width: 100%;
   min-height: 320px;
+  cursor: pointer;
 }
 
 .hits-item::before {
@@ -926,6 +931,7 @@ img {
 .catalog-image {
   width: 267px;
   height: 267px;
+  object-fit: cover;
   border-radius: 50%;
   z-index: 10;
 }
@@ -966,8 +972,7 @@ img {
 
 .hits-button,
 .catalog-button {
-  margin-top: 337px;
-  margin-left: 46px;
+  margin-bottom: 21px;
   padding-left: 16px;
   padding-right: 16px;
   z-index: 1;
@@ -976,9 +981,8 @@ img {
 .catalog-item-hover {
   position: absolute;
   top: -6px;
-  left: -13px;
-  width: 293px;
-  min-height: 402px;
+  width: 108%;
+  height: calc(100% + 80px);
   background-color: var(--special-loginbutton);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -992,7 +996,9 @@ img {
 
 .hits-item:hover .catalog-item-hover,
 .catalog-item:hover .catalog-item-hover {
-  display: block;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   z-index: 2;
 }
 
@@ -1337,13 +1343,13 @@ img {
 .filter-form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 870px;
+  width: 885px;
 }
 
 .filter-form fieldset {
   margin: 0;
   padding: 0;
+  margin-right: 15px;
   border: none;
   margin-bottom: 14px;
 }
