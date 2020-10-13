@@ -210,6 +210,11 @@ img {
   border-radius: 26px;
 }
 
+.site-navigation-current a:hover:not(.sub-navigation a) {
+  color: var(--basic-white);
+  background-color: var(--special-menucurrent);
+}
+
 .site-navigation-link:hover,
 .site-navigation-link:focus {
   padding-bottom: 8px;
@@ -282,8 +287,8 @@ img {
   background-color: var(--special-menucurrent);
 }
 
-.sub-navigation-link:hover,
-.sub-navigation-link:focus {
+.sub-navigation-link:hover:not(.sub-navigation-current),
+.sub-navigation-link:focus:not(.sub-navigation-current) {
   background-color: var(--special-submenuhover);
   border-radius: 0;
 }
@@ -296,7 +301,7 @@ img {
 
 .sub-navigation-current:hover,
 .sub-navigation-current:focus {
-  color: var(--basic-text);
+  color: var(--basic-white);
 }
 
 /* User navigation */
@@ -927,12 +932,17 @@ img {
 .hits-item,
 .catalog-item {
   position: relative;
+}
+
+.catalog-item a,
+.hits-item a {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   min-height: 320px;
-  cursor: pointer;
+  color: var(--basic-white);
 }
 
 .hits-item::before {
@@ -1002,7 +1012,8 @@ img {
 .catalog-item-hover {
   position: absolute;
   top: -6px;
-  width: 108%;
+  left: -13px;
+  width: 110%;
   height: calc(100% + 80px);
   background-color: var(--special-loginbutton);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
@@ -1554,19 +1565,12 @@ img {
   background-image: url("../img/icon-radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.8;
 }
 
 .filter-input-radio + label:hover::before,
 .filter-input-radio + label:focus::before {
-  content: "";
-  position: absolute;
-  left: -30px;
-  top: -3px;
-  width: 22px;
-  height: 22px;
-  background-image: url("../img/icon-radio-off-hover.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  opacity: 1;
 }
 
 .filter-input-radio:checked + label::before {
@@ -1579,22 +1583,14 @@ img {
   background-image: url("../img/icon-radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.8;
 }
 
 .filter-input-radio:checked + label:hover::before,
 .filter-input-radio:checked + label:focus::before {
-  content: "";
-  position: absolute;
-  left: -30px;
-  top: -3px;
-  width: 22px;
-  height: 22px;
-  background-image: url("../img/icon-radio-on-hover.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  opacity: 1;
 }
 
-.filter-input-radio:disabled + label::before,
 .filter-input-radio:disabled + label::before {
   opacity: 0.6;
 }
@@ -1653,6 +1649,7 @@ img {
   background-image: url("../img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.8;
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1665,36 +1662,34 @@ img {
   background-image: url("../img/icon-checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.8;
 }
 
 .filter-input-checkbox + label:hover::before,
 .filter-input-checkbox + label:focus::before {
-  content: "";
-  position: absolute;
-  left: -34px;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  background-image: url("../img/icon-checkbox-off-hover.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-input-checkbox:disabled + label::before {
-  /* opacity: 0.4; */
+  opacity: 1;
 }
 
 .filter-input-checkbox:checked + label:hover::before,
 .filter-input-checkbox:checked + label:focus::before {
-  content: "";
-  position: absolute;
-  left: -35px;
-  top: 0;
-  width: 24px;
-  height: 20px;
-  background-image: url("../img/icon-checkbox-on-hover.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label::before {
+  opacity: 0.6;
+}
+
+.filter-input:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filter-input:disabled + label,
+.filter-input:checked:disabled + label,
+.filter-input:disabled:hover + label,
+.filter-input:disabled:focus + label {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .filter-button {

@@ -105,7 +105,7 @@
     <h1 class="page-title">Сливочное мороженое</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр мороженого</h2>
-      <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+      <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
         <fieldset class="sorting">
           <legend>Сортировка:</legend>
           <select class="filter-sorting" name="sorting">
@@ -121,8 +121,8 @@
             <div class="range-controls">
               <div class="scale">
                 <div class="bar"></div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
               </div>
             </div>
             <div class="price-controls">
@@ -188,99 +188,123 @@
       <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-1.jpg" width="267" height="267" alt="Апельсиновое мороженое">
-          <p class="catalog-price">310 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-1.jpg" width="267" height="267" alt="Апельсиновое мороженое">
+            <p class="catalog-price">310 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочное с апельсиновым джемом и цитрусовой стружкой»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-2.jpg" width="267" height="267" alt="Кофейное мороженое">
-          <p class="catalog-price">380 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочно-кофейное с кусочками шоколада</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-2.jpg" width="267" height="267" alt="Кофейное мороженое">
+            <p class="catalog-price">380 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочно-кофейное с кусочками шоколада</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочно-кофейное с кусочками шоколада»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-3.jpg" width="267" height="267" alt="Клубничное мороженое">
-          <p class="catalog-price">355 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-3.jpg" width="267" height="267" alt="Клубничное мороженое">
+            <p class="catalog-price">355 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочно-клубничное с присыпкой из белого шоколада»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-4.jpg" width="267" height="267" alt="Мороженое крем-брюле">
-          <p class="catalog-price">415 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочное крем-брюле с карамельной подливкой</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-4.jpg" width="267" height="267" alt="Мороженое крем-брюле">
+            <p class="catalog-price">415 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочное крем-брюле с карамельной подливкой</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочное крем-брюле с карамельной подливкой»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-5.jpg" width="267" height="267" alt="Брусничное мороженое">
-          <p class="catalog-price">325 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочное с брусничным джемом</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-5.jpg" width="267" height="267" alt="Брусничное мороженое">
+            <p class="catalog-price">325 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочное с брусничным джемом</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочное с брусничным джемом»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-6.jpg" width="267" height="267" alt="Черничное мороженое">
-          <p class="catalog-price">410 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочно-черничное с цельными ягодами черники</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-6.jpg" width="267" height="267" alt="Черничное мороженое">
+            <p class="catalog-price">410 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочно-черничное с цельными ягодами черники</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочно-черничное с цельными ягодами черники»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-7.jpg" width="267" height="267" alt="Лимонное мороженое">
-          <p class="catalog-price">315 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочно-лимонное с карамельной присыпкой</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-7.jpg" width="267" height="267" alt="Лимонное мороженое">
+            <p class="catalog-price">315 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочно-лимонное с карамельной присыпкой</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочно-лимонное с карамельной присыпкой»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-8.jpg" width="267" height="267" alt="С шоколадной стружкой">
-          <p class="catalog-price">320 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочное с шоколадной стружкой</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-8.jpg" width="267" height="267" alt="С шоколадной стружкой">
+            <p class="catalog-price">320 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочное с шоколадной стружкой</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочное с шоколадной стружкой»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-9.jpg" width="267" height="267" alt="Ванильное мороженое">
-          <p class="catalog-price">440 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочно-ванильное с кусочками шоколада</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-9.jpg" width="267" height="267" alt="Ванильное мороженое">
+            <p class="catalog-price">440 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочно-ванильное с кусочками шоколада</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочно-ванильное с кусочками шоколада»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-10.jpg" width="267" height="267" alt="С ментоловым сиропом">
-          <p class="catalog-price">435 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочное с ментоловым сиропом</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-10.jpg" width="267" height="267" alt="С ментоловым сиропом">
+            <p class="catalog-price">435 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочное с ментоловым сиропом</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочное с ментоловым сиропом»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-11.jpg" width="267" height="267" alt="С черным шоколадом">
-          <p class="catalog-price">355 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочное с кусочками черного шоколада</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-11.jpg" width="267" height="267" alt="С черным шоколадом">
+            <p class="catalog-price">355 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочное с кусочками черного шоколада</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочное с кусочками черного шоколада»">Быстрый просмотр</button>
           </div>
         </li>
         <li class="catalog-item">
-          <img class="catalog-image" src="img/catalog-image-12.jpg" width="267" height="267" alt="С мятным сиропом">
-          <p class="catalog-price">420 ₽<span>/кг</span></p>
-          <h3 class="catalog-title">Сливочное с мятным сиропом</h3>
+          <a href="#">
+            <img class="catalog-image" src="img/catalog-image-12.jpg" width="267" height="267" alt="С мятным сиропом">
+            <p class="catalog-price">420 ₽<span>/кг</span></p>
+            <h3 class="catalog-title">Сливочное с мятным сиропом</h3>
+          </a>
           <div class="catalog-item-hover">
-            <button class="catalog-button button" type="button">Быстрый просмотр</button>
+            <button class="catalog-button button" type="button" aria-label="Посмотеть мороженое «Сливочное с мятным сиропом»">Быстрый просмотр</button>
           </div>
         </li>
       </ul>
