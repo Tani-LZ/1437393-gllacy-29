@@ -64,6 +64,7 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -409,6 +410,10 @@ img {
   position: relative;
 }
 
+.header-login-wrapper:focus {
+  outline: none;
+}
+
 .modal-account {
   position: absolute;
   top: 36px;
@@ -427,7 +432,8 @@ img {
   z-index: 20;
 }
 
-.header-login-wrapper:hover .modal-account {
+.header-login-wrapper:hover .modal-account,
+.header-login-wrapper:focus .modal-account {
   display: block;
 }
 
@@ -497,6 +503,12 @@ img {
   outline: none;
 }
 
+.header-login-wrapper:focus .header-login {
+  color: var(--basic-text);
+  background-color: var(--basic-white);
+  outline: none;
+}
+
 .header-login::before {
   position: absolute;
   content: "";
@@ -510,7 +522,8 @@ img {
 }
 
 .header-login:hover::before,
-.header-login:focus::before {
+.header-login:focus::before,
+.header-login-wrapper:focus .header-login::before {
   position: absolute;
   content: "";
   width: 20px;
