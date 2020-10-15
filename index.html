@@ -285,20 +285,22 @@
     <form class="feedback-form" action="#" method="post">
       <p>
         <label class="visually-hidden" for="name">Ваше имя</label>
-        <input class="modal-input" type="text" name="name" id="name" placeholder="Имя Фамилия">
+        <input class="modal-input-name" type="text" name="name" id="name" placeholder="Имя Фамилия">
       </p>
       <p>
         <label class="visually-hidden" for="feedback-email">Ваш e-mail</label>
-        <input type="email" id="feedback-email" placeholder="email@example.com">
+        <input class="modal-input-email" type="email" name="email" id="feedback-email" placeholder="email@example.com">
       </p>
       <p>
         <label class="visually-hidden" for="text-message">Текст сообщения:</label>
-        <textarea name="text" id="text-message" rows="6" placeholder="В свободной форме"></textarea>
+        <textarea class="modal-feedback-text" name="text" id="text-message" rows="6" placeholder="В свободной форме"></textarea>
       </p>
       <button class="feedback-button button" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/modal-feedback.js"></script>
 
 </body>
 
