@@ -245,6 +245,10 @@ img {
   z-index: 3;
 }
 
+.site-navigation > li:focus-within .sub-navigation {
+  display: block;
+}
+
 .site-navigation > li:hover .sub-navigation {
   display: block;
 }
@@ -292,6 +296,7 @@ img {
 .sub-navigation-link:focus:not(.sub-navigation-current) {
   background-color: var(--special-submenuhover);
   border-radius: 0;
+  outline: none;
 }
 
 .sub-navigation-link:active {
@@ -322,8 +327,11 @@ img {
   border-radius: 50%;
 }
 
-.header-search-wrapper:hover .header-search,
-.header-search-wrapper:focus .header-search {
+.header-search-wrapper:focus-within .header-search {
+  display: block;
+}
+
+.header-search-wrapper:hover .header-search {
   display: block;
 }
 
@@ -387,6 +395,17 @@ img {
   border-radius: 4px;
 }
 
+.header-search input:hover {
+  box-shadow: inset 2px 2px 0 0 var(--special-subscriptioninput),
+               inset -2px -2px 0 0 var(--special-subscriptioninput);
+}
+
+.header-search input:focus {
+  box-shadow: inset 2px 2px 0 0 var(--special-formfocus),
+               inset -2px -2px 0 0 var(--special-formfocus);
+  outline: none;
+}
+
 /* Login/Cart */
 .user-button {
   position: relative;
@@ -404,6 +423,10 @@ img {
   background-color: var(--special-loginbutton);
   border-radius: 20px;
   cursor: pointer;
+}
+
+.header-login-wrapper:focus-within .modal-account {
+  display: block;
 }
 
 .header-login-wrapper {
@@ -432,8 +455,7 @@ img {
   z-index: 20;
 }
 
-.header-login-wrapper:hover .modal-account,
-.header-login-wrapper:focus .modal-account {
+.header-login-wrapper:hover .modal-account {
   display: block;
 }
 
@@ -478,11 +500,13 @@ img {
 }
 
 .account-form input:hover {
-  border: 2px solid var(--special-subscriptioninput);
+  box-shadow: inset 2px 2px 0 0 var(--special-subscriptioninput),
+              inset -2px -2px 0 0 var(--special-subscriptioninput);
 }
 
 .account-form input:focus {
-  border: 2px solid var(--special-formfocus);
+  box-shadow: inset 2px 2px 0 0 var(--special-formfocus),
+              inset -2px -2px 0 0 var(--special-formfocus);
   outline: none;
 }
 
@@ -697,6 +721,10 @@ img {
   margin-right: 14px;
   margin-bottom: 21px;
   padding: 10px 15px;
+}
+
+.header-cart-wrapper:focus-within .modal-user-cart {
+  display: block;
 }
 
 .header-cart-wrapper:hover .modal-user-cart {
@@ -1300,6 +1328,17 @@ img {
   color: var(--basic-text);
   border: 1px solid var(--special-subscriptioninput);
   border-radius: 6px;
+}
+
+.subscription-form input:hover {
+  box-shadow: inset 2px 2px 0 0 var(--special-subscriptioninput),
+              inset -2px -2px 0 0 var(--special-subscriptioninput);
+}
+
+.subscription-form input:focus {
+  box-shadow: inset 2px 2px 0 0 var(--special-formfocus),
+              inset -2px -2px 0 0 var(--special-formfocus);
+  outline: none;
 }
 
 /* Address */
@@ -2004,26 +2043,26 @@ img {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    transform: translateY(-50%, -2000px);
   }
 
   70% {
-    transform: translateY(30px);
+    transform: translate(-50%, -40%);
   }
 
   90% {
-    transform: translateY(-10px);
+    transform: translate(-50%, -55%);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
   }
 }
 
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translate(-50%, -50%);
   }
 
   10%,
@@ -2031,13 +2070,13 @@ img {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-51%, -50%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(-49%, -50%);
   }
 }
