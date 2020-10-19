@@ -14,7 +14,7 @@ try {
   isStorageSupport = false;
 }
 
-addressButton.addEventListener("click", function (evt) {
+addressButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedBackPopup.classList.add("modal-show");
 
@@ -26,26 +26,26 @@ addressButton.addEventListener("click", function (evt) {
   }
 });
 
-feedBackClose.addEventListener("click", function (evt) {
+feedBackClose.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedBackPopup.classList.remove("modal-show");
   feedBackPopup.classList.remove("modal-error");
 });
 
-feedBackForm.addEventListener("submit", function (evt) {
+feedBackForm.addEventListener("submit", function(evt) {
   if (!feedBackName.value || !feedBackEmail.value) {
-  evt.preventDefault();
-  feedBackPopup.classList.remove("modal-error");
-  feedBackPopup.offsetWidth = feedBackPopup.offsetWidth;
-  feedBackPopup.classList.add("modal-error");
-} else {
+    evt.preventDefault();
+    feedBackPopup.classList.remove("modal-error");
+    feedBackPopup.offsetWidth = feedBackPopup.offsetWidth;
+    feedBackPopup.classList.add("modal-error");
+  } else {
     if (isStorageSupport) {
       localStorage.setItem("name", feedBackName.value);
     }
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     if (feedBackPopup.classList.contains("modal-show")) {
       evt.preventDefault();
