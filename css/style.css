@@ -865,6 +865,8 @@ img {
 /* Breadcrumbs */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
+  width: 880px;
   margin: 0;
   margin-bottom: 2px;
   padding: 0;
@@ -917,7 +919,7 @@ img {
 
 /* Banners */
 .banners {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .banners-list {
@@ -933,6 +935,7 @@ img {
 .banners-item  {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
   padding-left: 16px;
   padding-right: 30px;
   background-repeat: no-repeat;
@@ -977,7 +980,7 @@ img {
 
 /* Catalog/Hits */
 .hits {
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 .catalog-list,
 .hits-list {
@@ -993,6 +996,10 @@ img {
 .hits-item,
 .catalog-item {
   position: relative;
+}
+
+.hits-item {
+  margin-bottom: 35px;
 }
 
 .catalog-item a,
@@ -1084,7 +1091,8 @@ img {
   display: none;
 }
 
-.catalog-item:hover {
+.catalog-item:hover,
+.hits-item:hover {
   z-index: 20;
 }
 
@@ -1328,6 +1336,8 @@ img {
 }
 
 .subscription-text {
+  display: inline-block;
+  vertical-align: middle;
   margin: 0;
   margin-bottom: 40px;
   color: var(--special-subscription);
@@ -1417,26 +1427,32 @@ img {
 
 .address-opening {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 35px;
   font-size: 14px;
   line-height: 20px;
 }
 
 .address-button {
   padding-top: 9px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   padding-left: 28px;
   padding-right: 29px;
   text-shadow: 0px 2px 5px var(--special-buttontextshadow);
 }
 
-.address-image {
-  display: block;
-}
-
 .address iframe {
   width: 100%;
   border: none;
+}
+
+.address-image {
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -600px;
+  z-index: -1;
 }
 
 /* Filters */
@@ -1582,7 +1598,7 @@ img {
   height: 4px;
   padding: 0;
   border: 8px solid var(--basic-white);
-  background-color: #ababab;
+  background-color: var(--special-itemprice);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--special-toggles);
   cursor: pointer;
@@ -1798,12 +1814,16 @@ img {
 /* Footer */
 
 .main-footer {
-  margin-top: 18px;
+  margin-top: 13px;
   margin-bottom: 25px;
   padding-left: 29px;
   padding-right: 27px;
   display: grid;
   grid-template-columns: auto 1fr auto;
+}
+
+.inner-footer {
+  margin-top: 18px;
 }
 
 .footer-socials {
